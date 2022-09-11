@@ -1,4 +1,8 @@
-
+/**
+ * This class implements a car with an engine and 4 tires.
+ * @author Eric Johnston
+ * @version 1.0
+ */
 public class Car
 {
 	private Engine engine;
@@ -7,6 +11,14 @@ public class Car
 	private Tire tire3;
 	private Tire tire4;
 
+	/**
+	 * Constructs a Car object by passing instances of an engine object and 4 tire objects
+	 * @param engine object
+	 * @param tire1 object
+	 * @param tire2 object
+	 * @param tire3 object
+	 * @param tire4 object
+	 */
 	public Car(Engine engine, Tire tire1, Tire tire2, Tire tire3, Tire tire4)
 	{
 		this.engine = engine;
@@ -16,6 +28,11 @@ public class Car
 		this.tire4 = tire4;
 	}
 
+	/**
+	 * Accepts an integer and checks if speed is between 1 and 60. If so the car will drive.
+	 * If not write to console that speed must be between 1 and 60.
+	 * @param speed as an integer
+	 */
 	public void drive(int speed)
 	{
 		if (speed < 1 || speed > 60)
@@ -29,16 +46,26 @@ public class Car
 		}
 	}
 	
+	/**
+	 * Call the engine.start() method to start the car
+	 */
 	public void start()
 	{
 		engine.start(tire1.getPsi(), tire2.getPsi(), tire3.getPsi(), tire4.getPsi());
 	}
 	
+	/**
+	 * Call the engine.stop() method to stop the car.
+	 */
 	public void stop()
 	{
 		engine.stop();
 	}
 
+	/**
+	 * Call first engine.stop(), then engine.start() to restart the car.
+	 * Print to console that the car has restarted.
+	 */
 	public void restart()
 	{
 		System.out.println("Restarting car...");
