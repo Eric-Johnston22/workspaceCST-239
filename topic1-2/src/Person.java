@@ -23,55 +23,37 @@ public class Person
 		this.weight = weight;
 	}
 	
-	/**
-	 * Age getter
-	 * @return this.age
-	 */
+	// Age getter
 	public int getAge()
 	{
 		return age;
 	}
 
-	/**
-	 * Age setter
-	 * @param age
-	 */
+	// Age setter
 	public void setAge(int age)
 	{
 		this.age = age;
 	}
 
-	/**
-	 * Name getter
-	 * @return this.name
-	 */
+	// Name getter
 	public String getName()
 	{
 		return name;
 	}
 
-	/**
-	 * Name setter
-	 * @param name
-	 */
+	// Name setter
 	public void setName(String name)
 	{
 		this.name = name;
 	}
 
-	/**
-	 * Weight getter
-	 * @return this.name
-	 */
+	// Weight getter
 	public float getWeight()
 	{
 		return weight;
 	}
 
-	/**
-	 * Weight setter
-	 * @param weight
-	 */
+	// Weight setter
 	public void setWeight(float weight)
 	{
 		this.weight = weight;
