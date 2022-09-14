@@ -3,7 +3,6 @@ import java.util.Random;
 
 public class Game
 {
-
 	public static void main(String[] args)
 	{
 		// Create a random health between 1 and 100
@@ -16,12 +15,16 @@ public class Game
 		Superman superman = new Superman(health1);
 		Batman batman = new Batman(health2);
 		System.out.println("Super Heroes Created!");
+		System.out.println("Superman has " + superman.getHealth() + " health");
+		System.out.println("Batman has " + batman.getHealth() + " health");
 		
 		// Run the game until one of the Super Heroes is dead
 		System.out.println("Running our game...");
 		while(!superman.isDead() && !batman.isDead())
 		{
 			superman.attack(batman);
+			superman.superStrength(batman);
+			batman.regenerateHealth();
 			batman.attack(superman);
 			
 			if(superman.isDead())

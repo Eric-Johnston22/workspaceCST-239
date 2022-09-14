@@ -13,6 +13,17 @@ public class SuperHero
 		this.health = health;
 	}
 	
+	public int getHealth()
+	{
+		return health;
+	}
+
+	public void setHealth(int health)
+	{
+		this.health = health;
+	}
+
+
 	public void attack(SuperHero opponent)
 	{
 		Random rand = new Random();
