@@ -1,6 +1,11 @@
 package app;
 import java.util.Random;
 
+/**
+ * This class holds the main() method to run the game
+ * @author Eric Johnston
+ * @version 1.0
+ */
 public class Game
 {
 	public static void main(String[] args)
