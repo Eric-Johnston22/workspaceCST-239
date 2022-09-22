@@ -1,5 +1,10 @@
 package base;
 
+/**
+ * Implements a base shape with height, width, and name
+ * @author Eric Johnston
+ * @version
+ */
 public class ShapeBase implements ShapeInterface
 {
 	protected int height;
