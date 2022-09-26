@@ -13,6 +13,10 @@ import base.Triangle;
  */
 public class Test
 {
+	/**
+	 * Prints to console shape name and area
+	 * @param shape object
+	 */
 	private static void displayArea(ShapeBase shape)
 	{
 		System.out.println("This is a shape named " + shape.getName() + " with an area of " + shape.calculateArea());

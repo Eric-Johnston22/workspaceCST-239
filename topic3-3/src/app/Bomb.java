@@ -6,31 +6,24 @@ package app;
  * @author Eric Johnston
  * @version 1.0
  */
-public class Bomb extends Weapon
+public class Bomb implements WeaponInterface
 {
 	@Override
-	/**
-	 * 
-	 */
 	public void fireWeapon(int power)
 	{
 		System.out.println("In Bomb.fireWeapon() with a power of " + power);
 	}
 	
-	/**
-	 * Overloaded - Fires the weapon and calls fireWeapon from parent class
-	 */
-	public void fireWeapn()
+	@Override
+	public void fireWeapon()
 	{
-		System.out.println("In overloaded Bomb.fireWeapon()");
-		super.fireWeapon(10);
+		System.out.println("In Bomb.fireWeapon()");
 	}
 	
-	/**
-	 * 
-	 */
+	@Override
 	public void activate(boolean enable)
 	{
 		System.out.println("In the Bomb.activate() with an enable of " + enable);
 	}
+
 }

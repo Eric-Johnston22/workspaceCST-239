@@ -7,29 +7,21 @@ package app;
  * @version 1.0
  *
  */
-public class Gun extends Weapon
+public class Gun implements WeaponInterface
 {
 	@Override
-	/**
-	 * 
-	 */
 	public void fireWeapon(int power)
 	{
 		System.out.println("In Gun.fireWeapon() with a power of " + power);
 	}
 	
-	/**
-	 * Overloaded - Fires the weapon and calls fireWeapon from parent class
-	 */
+	@Override
 	public void fireWeapon()
 	{
-		System.out.println("In overloaded Gun.fireWeapon()");
-		super.fireWeapon(5);
+		System.out.println("In Gun.fireWeapon()");
 	}
 	
-	/**
-	 * 
-	 */
+	@Override
 	public void activate(boolean enable)
 	{
 		System.out.println("In the Gun.activate() with an enable of " + enable);
