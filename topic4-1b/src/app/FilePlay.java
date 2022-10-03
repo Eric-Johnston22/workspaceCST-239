@@ -7,10 +7,20 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
+/**
+ * Implements a FilePlay class that reads a file, then outputs its contents to a new file.
+ * @author Eric Johnston
+ * @version 1.0
+ */
 public class FilePlay
 {
 
+	/**
+	 * Reads a file then outputs its contents to a new file.
+	 * @param inputFile
+	 * @param outputFile
+	 * @return int for error codes
+	 */
 	private static int copyFile(String inputFile, String outputFile)
 	{
 		// Input and Output File Read/Write declarations
