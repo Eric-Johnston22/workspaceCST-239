@@ -1,37 +1,23 @@
 package testing;
 
-import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-public class Test
+public class Test<T>
 {
-	public class Car 
+	
+	public static <T> void printGenericArr(T[] arr)
 	{
-	    private String brand = null;
-	    private int doors = 0;
-
-	    public String getBrand() { return this.brand; }
-	    public void   setBrand(String brand){ this.brand = brand;}
-
-	    public int  getDoors() { return this.doors; }
-	    public void setDoors (int doors) { this.doors = doors; }
+		for (T i : arr)
+		{
+			System.out.println(i);
+		}
 	}
 	
 	public static void main(String[] args)
 	{
-		ObjectMapper objectMapper = new ObjectMapper();
-
-		String carJson =
-		    "{ \"brand\" : \"Mercedes\", \"doors\" : 5 }";
-
-		try {
-		    Car car = objectMapper.readValue(carJson, Car.class);
-
-		    System.out.println("car brand = " + car.getBrand());
-		    System.out.println("car doors = " + car.getDoors());
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
+		Map m = new HashMap();
+		m.put(null, "Test");
+		m.put(null, "Fest");
 	}
 }
