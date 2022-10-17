@@ -3,21 +3,29 @@ package testing;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Test<T>
+public class Test
 {
-	
-	public static <T> void printGenericArr(T[] arr)
+	public static class Multithread extends Thread
 	{
-		for (T i : arr)
+		private int threadNumber;
+		
+		public Multithread(int threadNumber)
 		{
-			System.out.println(i);
+			this.threadNumber = threadNumber;
+		}
+		
+		public void run()
+		{
+			System.out.println("Thread number " + threadNumber);
 		}
 	}
 	
 	public static void main(String[] args)
 	{
-		Map m = new HashMap();
-		m.put(null, "Test");
-		m.put(null, "Fest");
+		for (int i = 0; i < 1000000; i++)
+		{
+			Multithread myThread = new Multithread(i);
+			myThread.start();
+		}
 	}
 }
