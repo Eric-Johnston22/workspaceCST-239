@@ -1,31 +1,29 @@
 package testing;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Test
 {
-	public static class Multithread extends Thread
-	{
-		private int threadNumber;
-		
-		public Multithread(int threadNumber)
-		{
-			this.threadNumber = threadNumber;
-		}
-		
-		public void run()
-		{
-			System.out.println("Thread number " + threadNumber);
-		}
+	public static List<String> readUserInput() {
+	    List<String> userData = new ArrayList<>();
+	    System.out.println("Please enter your data below: (send 'bye' to exit) ");
+	    Scanner input = new Scanner(System.in);
+	    while (true) {
+	        String line = input.nextLine();
+	        if ("bye".equalsIgnoreCase(line)) {
+	            break;
+	        }
+	        userData.add(line);
+	    }
+	    return userData;
 	}
 	
-	public static void main(String[] args)
-	{
-		for (int i = 0; i < 1000000; i++)
-		{
-			Multithread myThread = new Multithread(i);
-			myThread.start();
-		}
+	public static void main(String[] args) {
+	    List<String> userData = readUserInput();
+	    System.out.printf("User Input Data:\n%s", String.join("\n", userData));
 	}
 }
